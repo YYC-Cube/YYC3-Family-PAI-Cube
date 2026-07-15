@@ -42,8 +42,6 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 9
 
       - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v6
@@ -66,7 +64,7 @@ jobs:
       - name: Test all packages
         run: |
           FAILED=0
-          for pkg in core ai-hub emotion i18n-core ui plugins mcp-servers motion cli effects; do
+          for pkg in core ai-hub emotion i18n-core i18n-react ui plugins mcp-servers motion cli effects; do
             echo "▶️ Testing @yyc3/$pkg ..."
             pnpm --filter @yyc3/$pkg test || FAILED=$((FAILED+1))
             echo "✅ @yyc3/$pkg done"
@@ -88,8 +86,6 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 9
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -130,11 +126,14 @@ jobs:
       - name: Generate coverage for @yyc3/cli
         run: pnpm -C packages/cli test -- --coverage
 
+      - name: Generate coverage for @yyc3/i18n-react
+        run: pnpm -C packages/i18n-react test -- --coverage
+
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          files: packages/core/coverage/lcov.info,packages/ai-hub/coverage/lcov.info,packages/ui/coverage/lcov.info,packages/plugins/coverage/lcov.info,packages/i18n-core/coverage/lcov.info,packages/effects/coverage/lcov.info,packages/motion/coverage/lcov.info,packages/mcp-servers/coverage/lcov.info,packages/cli/coverage/lcov.info
+          files: packages/core/coverage/lcov.info,packages/ai-hub/coverage/lcov.info,packages/ui/coverage/lcov.info,packages/plugins/coverage/lcov.info,packages/i18n-core/coverage/lcov.info,packages/i18n-react/coverage/lcov.info,packages/effects/coverage/lcov.info,packages/motion/coverage/lcov.info,packages/mcp-servers/coverage/lcov.info,packages/cli/coverage/lcov.info
           fail_ci_if_error: false
 
   audit:
@@ -148,8 +147,6 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 9
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -175,8 +172,6 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 9
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -203,8 +198,6 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 9
 
       - name: Setup Node.js
         uses: actions/setup-node@v6

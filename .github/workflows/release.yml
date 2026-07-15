@@ -20,8 +20,6 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 9
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -43,7 +41,7 @@ jobs:
 
       - name: Test all packages
         run: |
-          for pkg in core ai-hub emotion i18n-core ui plugins mcp-servers motion cli effects; do
+          for pkg in core ai-hub emotion i18n-core i18n-react ui plugins mcp-servers motion cli effects; do
             echo "▶️ Testing @yyc3/$pkg ..."
             pnpm --filter @yyc3/$pkg test
             EXIT_CODE=$?
@@ -79,6 +77,7 @@ jobs:
             ai-hub,
             emotion,
             i18n-core,
+            i18n-react,
             ui,
             plugins,
             mcp-servers,
@@ -93,8 +92,6 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 9
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -201,8 +198,6 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 9
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -236,7 +231,7 @@ jobs:
       - name: Verify npm packages
         run: |
           echo "📦 Verifying published packages..."
-          for pkg in core ai-hub emotion i18n-core ui plugins mcp-servers motion cli; do
+          for pkg in core ai-hub emotion i18n-core i18n-react ui plugins mcp-servers motion cli effects; do
             VERSION=$(npm view @yyc3/$pkg version 2>/dev/null || echo "not found")
             echo "  @yyc3/$pkg: $VERSION"
           done
@@ -244,7 +239,7 @@ jobs:
       - name: Verify no workspace protocol leaked
         run: |
           echo "🔍 Checking for leaked workspace: protocol..."
-          for pkg in core ai-hub emotion i18n-core ui plugins mcp-servers motion cli; do
+          for pkg in core ai-hub emotion i18n-core i18n-react ui plugins mcp-servers motion cli; do
             DEPS=$(npm view @yyc3/$pkg dependencies --json 2>/dev/null || echo "{}")
             if echo "$DEPS" | grep -q "workspace:"; then
               echo "::error::@yyc3/$pkg has workspace: protocol in published dependencies!"
@@ -259,6 +254,6 @@ jobs:
           echo "🎉 Release ${{ github.ref_name }} completed successfully!"
           echo ""
           echo "Published:"
-          echo "  - 9 npm packages (@yyc3/*)"
+          echo "  - 10 npm packages (@yyc3/*)"
           echo "  - Docker image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.ref_name }}"
           echo "  - Changelog updated"

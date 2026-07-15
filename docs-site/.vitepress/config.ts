@@ -38,6 +38,7 @@ export default defineConfig({
           { text: '@yyc3/ai-hub — AI 集成中心', link: '/packages/ai-hub' },
           { text: '@yyc3/emotion — 情感引擎', link: '/packages/emotion' },
           { text: '@yyc3/i18n-core — 国际化', link: '/packages/i18n-core' },
+          { text: '@yyc3/i18n-react — React 绑定', link: '/packages/i18n-react' },
           { text: '@yyc3/ui — UI 组件库', link: '/packages/ui' },
           { text: '@yyc3/effects — 特效组件库', link: '/packages/effects' },
           { text: '@yyc3/plugins — 插件集合', link: '/packages/plugins' },
@@ -87,6 +88,7 @@ export default defineConfig({
           items: [
             { text: '@yyc3/emotion', link: '/packages/emotion' },
             { text: '@yyc3/i18n-core', link: '/packages/i18n-core' },
+            { text: '@yyc3/i18n-react', link: '/packages/i18n-react' },
           ],
         },
         {

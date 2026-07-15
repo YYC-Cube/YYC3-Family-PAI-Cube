@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### 🎉 正式发布 (Stable Release — 文档闭环完成)
 
 #### ✨ 新增特性
+
 - **完整文档体系** — README/CHANGELOG/MAINTENANCE 三件套闭环文档
 - **全量 API 参考** — 1250+ 行完整文档，覆盖所有模块
 - **架构设计文档** — 分层架构图、数据流图、模块职责说明
@@ -22,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **迁移指南链接** — 从 v1.x/v2.x 升级路径说明
 
 #### 📖 文档增强
+
 - **README.md** 全量重写 (1254行)
   - 特性概览与竞品对比表 (vs react-i18next/vue-i18n/typesafe-i18n)
   - 5 种快速开始示例（零配置/插件/React/Vue/Node.js）
@@ -36,6 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **MAINTENANCE.md** 新建企业级维护指南
 
 #### 验证结果
+
 - ✅ 文档闭环完成度: 100%
 - ✅ 所有示例代码经过验证
 - ✅ API 文档与源码一致
@@ -75,6 +78,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.0.0] - 2026-04-14
 
 ### Added
+
 - ✨ **LRU Cache System** - High-performance caching with TTL support and automatic eviction
 - ✨ **Plugin Architecture** - Extensible system with lifecycle hooks (init, destroy)
 - ✨ **Built-in Plugins**:
@@ -92,6 +96,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ✨ **42 Unit Tests** - 100% pass rate covering all core functionality
 
 ### Changed
+
 - ⚡ **10x Performance Improvement** - LRU cache reduces translation time from 0.5ms to 0.05ms
 - 📦 **25% Memory Reduction** - Optimized data structures and cache management
 - 🔧 **Renamed Core Class** - `I18nManager` → `I18nEngine` (better reflects functionality)
@@ -100,6 +105,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 🎯 **Stricter Type Safety** - Enhanced TypeScript strict mode compliance
 
 ### Fixed
+
 - 🐛 **Memory Leak in Subscriptions** - Proper cleanup on unsubscribe/destroy
 - 🐛 **Cache Invalidation Race Condition** - Thread-safe cache operations
 - 🐛 **Plugin Context Loss** - Fixed `this` binding issues in plugin methods
@@ -107,19 +113,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 🐛 **Locale Persistence Bug** - Fixed localStorage read/write edge cases
 
 ### Breaking Changes
+
 - 💥 **Import Path Changes**:
   - Old: `import { i18n } from '@yyc3/i18n'`
   - New: `import { i18n } from '@yyc3/i18n-core'`
-  
+
 - 💥 **Plugin Interface Update**:
   - Renamed hooks for consistency
   - Added required `name` property
-  
+
 - 💥 **Configuration Format**:
   - Cache config moved to nested object
   - Debug mode is now a boolean flag
 
 ### Migration Guide
+
 See [MIGRATION_GUIDE.md](./MIGRATION_GUIDE.md) for detailed migration instructions.
 
 ---
@@ -127,6 +135,7 @@ See [MIGRATION_GUIDE.md](./MIGRATION_GUIDE.md) for detailed migration instructio
 ## [1.0.0] - 2026-04-01
 
 ### Added
+
 - Initial release of YYC³ i18n solution
 - Basic translation engine
 - Locale switching support

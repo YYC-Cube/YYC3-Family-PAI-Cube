@@ -5,6 +5,7 @@ import { apply } from "./commands/apply"
 import { build } from "./commands/build"
 import { diff } from "./commands/diff"
 import { docs } from "./commands/docs"
+import { i18n } from "./commands/i18n"
 import { info } from "./commands/info"
 import { init } from "./commands/init"
 import { mcp } from "./commands/mcp"
@@ -47,6 +48,7 @@ async function main() {
     .addCommand(build)
     .addCommand(mcp)
     .addCommand(registry)
+    .addCommand(i18n)
 
   return program
 }
