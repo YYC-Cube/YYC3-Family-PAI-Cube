@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@antfu/ni": "^30.1.0",
-    "@babel/core": "^8.0.0",
+    "@babel/core": "^8.0.6",
     "@babel/parser": "^7.29.3",
     "@babel/plugin-transform-typescript": "^7.28.6",
     "@dotenvx/dotenvx": "^1.64.0",
@@ -53,7 +53,7 @@
     "node-fetch": "^3.3.2",
     "open": "^10.1.0",
     "ora": "^8.2.0",
-    "postcss": "^8.5.23",
+    "postcss": "^8.5.28",
     "prompts": "^2.4.2",
     "recast": "^0.23.11",
     "stringify-object": "^6.0.0",
@@ -72,11 +72,11 @@
     "eslint": "^10.1.0",
     "globals": "^16.2.0",
     "msw": "^2.14.2",
-    "postcss-selector-parser": "^7.1.1",
+    "postcss-selector-parser": "^7.1.6",
     "tsup": "^8.5.0",
     "typescript": "^5.8.0",
     "typescript-eslint": "^8.58.0",
-    "vitest": "^3.2.6"
+    "vitest": "^5.0.3"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0"
