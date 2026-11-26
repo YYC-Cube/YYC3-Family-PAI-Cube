@@ -4,11 +4,15 @@ description: "@yyc3/ide — YYC³ AI Family 智能设计开发环境"
 author: YanYuCloudCube Team <admin@0379.email>
 version: v1.0.0
 created: 2026-03-06
-updated: 2026-05-22
-status: active
-tags: [ide, ai, editor, monaco, mcp, collab, plugins, zustand]
+updated: 2026-11-27
+status: deprecated
+tags: [ide, ai, editor, monaco, mcp, collab, plugins, zustand, deprecated]
 category: package
 ---
+
+> ⚠️ **DEPRECATED — 本包已归档停维护（2026-11-27）**
+> 名字裁决：`@yyc3/ide` 归 DeepStack 独立血统（唯一真实消费方）。本包 2026-05 拆入、06 起停摆，现为纯归档标记，不再维护。
+> 后继重组见 `YYC3-Family-IDE-Matrix/ide`（已部署 ide.yyc3.top）。详见 [DEPRECATED.md](./DEPRECATED.md)。
 
 # 💻 @yyc3/ide
 

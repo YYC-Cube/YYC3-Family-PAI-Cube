@@ -43,7 +43,7 @@ export default defineConfig({
           { text: '@yyc3/effects — 特效组件库', link: '/packages/effects' },
           { text: '@yyc3/plugins — 插件集合', link: '/packages/plugins' },
           { text: '@yyc3/mcp-servers — MCP 服务器', link: '/packages/mcp-servers' },
-          { text: '@yyc3/ide — IDE 环境', link: '/packages/ide' },
+          // archived: ide → 见 packages/ide/DEPRECATED.md（@yyc3/ide 名字裁决归 DeepStack）
           { text: '@yyc3/motion — 动效引擎', link: '/packages/motion' },
           { text: '@yyc3/cli — 智能编程库 CLI', link: '/packages/cli' },
         ],
@@ -98,7 +98,7 @@ export default defineConfig({
             { text: '@yyc3/effects', link: '/packages/effects' },
             { text: '@yyc3/plugins', link: '/packages/plugins' },
             { text: '@yyc3/mcp-servers', link: '/packages/mcp-servers' },
-            { text: '@yyc3/ide', link: '/packages/ide' },
+            // archived: ide → 见 packages/ide/DEPRECATED.md（@yyc3/ide 名字裁决归 DeepStack）
             { text: '@yyc3/motion', link: '/packages/motion' },
             { text: '@yyc3/cli', link: '/packages/cli' },
           ],
