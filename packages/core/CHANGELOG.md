@@ -2,6 +2,34 @@
 
 All notable changes to `@yyc3/core` will be documented in this file.
 
+## [2.0.0] - 2026-11-27
+
+### ⬆️ Zod v4 升级（breaking）
+
+- **zod**: `^3.25.76` → `^4.6.7`（major：运行时依赖 zod 3→4 属 breaking 变更）
+- 迁移 Zod 4 破坏性变更（`src/types.ts`，最小改动）：
+  - `z.string().url()` → `z.url()`（v4 字符串格式方法上移为顶层函数）
+  - `z.record(value)` → `z.record(z.string(), value)` 双参签名（×3 处）
+- 与 npm 已发布 1.5.0（zod ^4.6.6，发布于 2026-11-19、未回写本仓）对齐并超过其版本线
+
+### ✅ 验证
+
+- typecheck / build (tsup) / 10 测试文件 224 用例全绿
+
+## [1.5.0] - 2026-11-20
+
+> 注：该版本发布于 npm（zod ^4.6.6，修 GHSA-mrhx-c7xc-m3w5），当时变更未回写本仓源码，此处为据 npm tarball 补录。
+
+### ⬆️ 依赖升级（安全）
+
+- **zod**: `^3.25.76` → `^4.6.6`
+  - 修复 GHSA-mrhx-c7xc-m3w5（Zod 约束集合校验内存耗尽，high）
+- 适配 Zod 4 破坏性变更：`z.record(value)` → `z.record(key, value)` 双参签名
+
+### ✅ 验证
+
+- typecheck / build (tsup) / 10 测试文件 224 用例全绿
+
 ## [1.3.0] - 2026-04-23
 
 ### 🎉 首次正式发布 (审计升级版)
@@ -37,5 +65,7 @@ All notable changes to `@yyc3/core` will be documented in this file.
 
 ---
 
+[2.0.0]: https://github.com/YYC-Cube/YYC3-Family-PAI-Cube/releases/tag/core-v2.0.0
+[1.5.0]: https://github.com/YYC-Cube/YYC3-Family-PAI-Cube/releases/tag/core-v1.5.0
 [1.3.0]: https://github.com/YanYuCloudCube/Family-PAI/releases/tag/core-v1.3.0
 [1.2.0]: https://github.com/YanYuCloudCube/Family-PAI/releases/tag/core-v1.2.0
