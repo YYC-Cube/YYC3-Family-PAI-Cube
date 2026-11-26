@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "YYC³ AI Family IDE — 智能设计开发环境",
+  "description": "[ARCHIVED] YYC³ AI Family IDE — 智能设计开发环境",
+  "deprecated": true,
   "scripts": {
     "test": "vitest run",
     "test:watch": "vitest",
