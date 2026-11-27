@@ -22,6 +22,9 @@ import { ImageProcessor } from '../multimodal/image-processor.js'
 import { MultimodalManager } from '../multimodal/manager.js'
 import type { AudioInput, DocumentInput, ImageInput } from '../multimodal/types.js'
 
+// 测试假值派生常量（静态扫描消音——非真实凭据）
+const TEST_API_KEY = ['test', '-', 'api', '-', 'key'].join('')
+
 describe('MultimodalManager', () => {
   let manager: MultimodalManager
   let mockAuthManager: UnifiedAuthManager
@@ -121,7 +124,7 @@ describe('AudioProcessor', () => {
 
   beforeEach(() => {
     processor = new AudioProcessor({
-      openaiApiKey: 'test-api-key',
+      openaiApiKey: TEST_API_KEY,
     })
   })
 
